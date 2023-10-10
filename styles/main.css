@@ -1,35 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Lugrasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Kanit:wght@300&display=swap');
 
 :root {
     --verical-space: 2rem;
     --horizontal-space: 3rem;
 
-    --light-color: 154, 45, 141;
-    --body-color: #0B3B85;
-    --heading-color: #0E196E;
-    --contrast-color: #175A7A;
+    --light-color: #8350FA;
+    --body-color: #3D44E3;
+    --heading-color: #A73DE3;
+    --contrast-color: #F75CFA;
 }
 
 body{
     font-family: 'Kanit', sans-serif;
-    font-size: 18px;
+    font-size: 21px;
     line-height: 1.5;
-    /* background-image: repeating-linear-gradient(225deg, rgba(13, 13, 13,0.09) 0px, rgba(13, 13, 13,0.09) 36px,rgba(229, 229, 229,0.09) 36px, rgba(229, 229, 229,0.09) 72px,transparent 72px, transparent 108px,rgba(163, 163, 163,0.09) 108px, rgba(163, 163, 163,0.09) 144px,rgba(21, 21, 21,0.09) 144px, rgba(21, 21, 21,0.09) 180px),repeating-linear-gradient(225deg, rgba(0,0,0,0.08) 0px, rgba(0,0,0,0.08) 14px,transparent 14px, transparent 28px,rgba(0,0,0,0.08) 28px, rgba(0,0,0,0.08) 42px,transparent 42px, transparent 56px,rgba(0,0,0,0.08) 56px, rgba(0,0,0,0.08) 70px),repeating-linear-gradient(225deg, rgba(0,0,0,0.08) 0px, rgba(0,0,0,0.08) 23px,transparent 23px, transparent 46px,rgba(0,0,0,0.08) 46px, rgba(0,0,0,0.08) 69px,transparent 69px, transparent 92px,rgba(0,0,0,0.08) 92px, rgba(0,0,0,0.08) 115px),repeating-linear-gradient(225deg, rgba(0,0,0,0.04) 0px, rgba(0,0,0,0.04) 6px,transparent 6px, transparent 12px,rgba(0,0,0,0.04) 12px, rgba(0,0,0,0.04) 18px,transparent 18px, transparent 24px,rgba(0,0,0,0.04) 24px, rgba(0,0,0,0.04) 30px),linear-gradient(225deg, rgb(248,98,74),rgb(198,74,248));
-    */
-    background-image: repeating-linear-gradient(225deg, rgba(13, 13, 13,0.09) 0px, rgba(13, 13, 13,0.09) 36px,rgba(229, 229, 229,0.09) 36px, rgba(229, 229, 229,0.09) 72px,transparent 72px, transparent 108px,rgba(163, 163, 163,0.09) 108px, rgba(163, 163, 163,0.09) 144px,rgba(21, 21, 21,0.09) 144px, rgba(21, 21, 21,0.09) 180px),repeating-linear-gradient(225deg, rgba(0,0,0,0.08) 0px, rgba(0,0,0,0.08) 14px,transparent 14px, transparent 28px,rgba(0,0,0,0.08) 28px, rgba(0,0,0,0.08) 42px,transparent 42px, transparent 56px,rgba(0,0,0,0.08) 56px, rgba(0,0,0,0.08) 70px),repeating-linear-gradient(225deg, rgba(0,0,0,0.08) 0px, rgba(0,0,0,0.08) 23px,transparent 23px, transparent 46px,rgba(0,0,0,0.08) 46px, rgba(0,0,0,0.08) 69px,transparent 69px, transparent 92px,rgba(0,0,0,0.08) 92px, rgba(0,0,0,0.08) 115px),repeating-linear-gradient(225deg, rgba(0,0,0,0.04) 0px, rgba(0,0,0,0.04) 6px,transparent 6px, transparent 12px,rgba(0,0,0,0.04) 12px, rgba(0,0,0,0.04) 18px,transparent 18px, transparent 24px,rgba(0,0,0,0.04) 24px, rgba(0,0,0,0.04) 30px),linear-gradient(225deg, rgba(248,74,145, 0.82),rgba(198,74,248, 0.79));
-    color: var(--body-color)
+    background-color: #C9D5FF;
+    background-image: url(../images/background.png);
+    color: var(--body-color);
 }
-
 
 main {
-    background-color: rgba(var(--light-color), 0.7); 
+    background-color: rgba(168, 182, 255, 0.4);
 }
-
 
 h1, h2, h3 {
     line-height: 1.2;
-    font-family: 'Lugrasimo', cursive;
-    color: var(--heading-color)
+    font-family: 'Glass Antiqua', cursive;
+}
+
+h2, h3 {
+    color: var(--light-color);
+}
+
+h1 {
+    color: var(--heading-color);
 }
 
 a {
@@ -54,18 +58,65 @@ body {
                          "nav nav"
                          "main main"
                          "foot foot";
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: auto auto;
     grid-template-rows: auto auto 1fr auto;
 }
 
-@media screen and (min-width: 25em){
+#navigation {
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: var(--light-color);;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--light-color);;
+}
+
+#name {
+    padding-bottom: .5em;
+  }
+
+  #portfolioItems img {
+    float: left;
+    width:  50em;
+    height: 25em;
+    object-fit: contain;
+    background-color: rgba(61, 68, 227, 0.5);
+    
+    }
+
+@media screen and (min-width: 56em){
     body {
-        grid-template-areas: "head head"
-                             "nav main"
+        grid-template-areas: "head nav"
+                             "main main"
                              "foot foot";
         grid-template-rows: auto 1fr auto;
-        
+        grid-template-columns: 1fr auto;
     }
+
+    #navigation li{
+        padding-top: 1em;
+        float: right;
+      }
+
+      #navigation ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+      }
+
+      #navigation {
+        border-top: none;
+      }
+
+      #name {
+        padding-bottom: inherit;
+      }
+
+      body > nav , body > header {
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: var(--light-color);;
+      }
 }
 
 body > * {
@@ -124,4 +175,19 @@ body#portfolio ul#portfolioItems {
 
 body#portfolio ul#portfolioItems li img {
     max-width: 100%;
+}
+
+#top {
+    background-color: rgba(168, 182, 255, 1);
+    font-size: large;
+    bottom: 10px;
+    color: var(--heading-color);
+    position: fixed;
+    right: 10px;
+    z-index: 999;
+    padding: .5em;
+}
+
+footer {
+    padding-bottom: 1em;
 }
